@@ -4,9 +4,167 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cadastro Empresa Junior</title>
+    <title>Empresa Junior</title>
+    <style>
+     
+        .navbar_up {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            border-radius: 10px;
+            overflow: auto;
+        }
+        .navbar_up li{
+            float: left;
+        }
+        .navbar_up li a{
+            color: #D8C11A;
+            display: block;
+            text-decoration: none;
+            padding: 20px 10px;
+        }
+        .navbar_up li a:hover {
+            opacity: 80%;
+            color: #d8c11b;
+            background-color: #05285B;
+        }
+        .titulo_menor{
+            text-decoration: none;
+        }
+        .img-1{
+        
+            display: block;
+            position: relative;
+            top:180px;
+            left:15px;
+            box-sizing: border-box;
+        }
+        a{
+            text-decoration: none;
+            font-family: 'Roboto', sans-serif;
+            font-weight: 400;
+            color:#f4f4f4;
+        }
+        .user_write{
+            background-color: #05285B;
+            color:#f4f4f4;
+         
+        }
+        .btn{
+            font-family: 'Roboto', sans-serif;
+            font-weight: 400;
+            display: block;
+            background-color: #05285B;
+            color:#f4f4f4;
+            cursor: pointer;
+            border: none;
+            border-color: #333;
+            padding: 5px 5px;
+            border-radius:10px ;
+        }
+        .btn:hover{
+            color: #D8C11A;
+            opacity: 80%;
+        }
+        body{
+            background-color:#05285B;
+        }
+        .corpo_txt{
+            font-family: 'Roboto', sans-serif;
+            font-weight: 400;
+            color:#f4f4f4;
+            text-decoration: none;
+        }
+        .titulo_menor{
+             font-family: 'Roboto', sans-serif;
+             font-weight: bold;
+             color:#f4f4f4;
+        }
+        .sub_titulo{
+            font-family: 'Roboto', sans-serif;
+             font-weight: 300;
+             color:#D8C11A;
+            
+        }
+        .container-1{
+            background-color: #1A5FB4;
+            max-width: 560px;
+            margin: auto ;
+            top: 50%;
+            border: 1px solid;
+            padding: 20px;
+            margin-bottom:auto ;
+            text-align: center;
+            border-radius: px;
+            
+        }
+        .container-2{
+            background-color: #1A5FB4;
+            max-width: 560px;
+            top:-200px;
+            left: 390px;
+
+            position:relative;
+            
+            border: 1px solid;
+            padding: 20px;
+            
+            text-align: center;
+            border-radius: px;
+            
+        }
+        .container_full{
+            margin-top:0px ;
+         
+        }
+        select{cursor: pointer;}
+        option{cursor: pointer;}
+        ::placeholder{color: #f4f4f4;}
+    </style>
 </head>
 <body>
-    <p> Vamos começar o cadastro:<br> </p>
+    <ul class="navbar_up">
+        <li><a href="#">Home</a> </li>
+        <li><a href="#">Info</a> </li>
+        <li><a href="#">Downloads</a> </li>
+        <li><a href="#">Help</a> </li>
+    </ul>
+    <div class="container_full">
+        
+        <div class="img-1">
+            <img src="/Image_Folder/Cópia de Arte.jpg" alt="Imagem" height="375px" width="375px">
+        </div>
+        
+        <div class="container-2">
+            <form>
+                
+        <h1 class="titulo_menor">Seja bem vindo</h1>
+        <p class="sub_titulo"> Para efetuar o seu login preencha os seus dados<br> </p>
+        
+        <div  class="container-1">
+              <label class="corpo_txt" for="tipo_de_login">Selecione o tipo de login</label>
+              <select class="user_write" name="LoginType" id="LoginType">
+            <option class="user_write" value="adm">Administrador</option>
+            <option class="user_write" value="ord">Usuario</option>
+        </select>
+        </div>
+        <div class="container-1">
+            <label class="corpo_txt" for="User_Name">Login</label>
+            <input class="user_write"type="text" id="User_Name" name="User_Name" placeholder="Digite seu usuario"><br>
+            <label class="corpo_txt" for="User_Pas">Senha</label>
+            <input class="user_write"type="text" id="User_Pas" name="User_Pas" placeholder="Digite sua senha">
+            <div>
+                <label class="corpo_txt"for="email">Email</label>
+                <input class="user_write"type="email" id ="email" name="email" placeholder="Digite seu email"></label>
+                
+            </div>
+            <br>
+           <input type="submit" class="btn" value="sign up">
+           <a class="btn" href="/Create_An_Account.html">sign in</a>
+        </div>
+    </div>
+</div>
+</form>
 </body>
 </html>
