@@ -19,15 +19,14 @@
             opacity: 80%;
      }
         .navbar_down{
-            
-            list-style:none;
-            width:auto;
             background-color: #333;
             max-width: none;
             overflow: auto;
             display: block;
+            width: 100vw;
         }
         .navbar_down li{
+            list-style:none;
             float: left;
         }
         .navbar_down li a{
@@ -90,9 +89,7 @@
             color: #D8C11A;
             opacity: 80%;
         }
-        body{
-            background-color:#05285B;
-        }
+        
         .corpo_txt{
             font-family: 'Roboto', sans-serif;
             font-weight: 400;
@@ -117,6 +114,7 @@
             box-sizing: border-box;
         }
         .img-1{
+          
             border: 1px solid;
             max-height: fit-content;
             max-width: fit-content;
@@ -125,24 +123,39 @@
             box-sizing: border-box;
             left: 20em;
         }
+        body{
+            background:#333 url('Image_Folder/Background-img.jfif') no-repeat center center/cover;
+            height:100vh;
+           
+           
+        }
+        .header-1{
+            height:100vh;
+            padding: 1rem ;
+            padding-top:1rem ;
+        }
 </style>
 </head>
 <body>
-    <div class="img-1">
-        <img class="img-div"src="/Image_Folder/IMG-01.png" alt="Imagem" height="100px" width="760px">
-    </div>
-    <ul class="navbar_up">
+    <header class="header-1">
+        
+        <div class="img-1">
+            <img class="img-div"src="/Image_Folder/IMG-01.png" alt="Imagem" height="100vh" width="700vh">
+        </div>
+        <ul class="navbar_up">
         <li><a href="#">Home</a> </li>
         <li><a href="#">Info</a> </li>
         <li><a href="#">Downloads</a> </li>
         <li><a href="#">Help</a> </li>
     </ul>
-    <ul class="navbar_down">
-        <li><a href="#">Contact</a> </li>
-        <li><a href="#">More Sites</a> </li>
-        <li><a href="#">Customer Area</a> </li>
-      
-    </ul>
+</header>
+   <section class="navbar_down">
+    <li><a href="#">Contact</a> </li>
+    <li><a href="#">More Sites</a> </li>
+    <li><a href="#">Customer Area</a> </li>
+    
+
+   </section>
     
 </body>
 </html>

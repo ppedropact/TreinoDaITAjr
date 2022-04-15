@@ -18,6 +18,29 @@
         color: #D8C11A;
             opacity: 80%;
      }
+        .navbar_down{
+            
+            list-style:none;
+            width:auto;
+            background-color: #333;
+            max-width: none;
+            overflow: auto;
+            display: block;
+        }
+        .navbar_down li{
+            float: left;
+        }
+        .navbar_down li a{
+            color: #D8C11A;
+            display: block;
+            text-decoration: none;
+            padding: 20px 10px;
+        }
+        .navbar_down li a:hover {
+            opacity: 80%;
+            color: #7c711f;
+            background-color: #afb1b5;
+        }
         .navbar_up {
             list-style: none;
             margin: 0;
@@ -30,15 +53,15 @@
             float: left;
         }
         .navbar_up li a{
-            color: #D8C11A;
+            color: #333;
             display: block;
             text-decoration: none;
             padding: 20px 10px;
         }
         .navbar_up li a:hover {
             opacity: 80%;
-            color: #d8c11b;
-            background-color: #05285B;
+            color: #7c711f;
+            background-color: #afb1b5;
         }
         .titulo_menor{
             text-decoration: none;
@@ -47,16 +70,16 @@
             max-height: fit-content;
             max-width: fit-content;
             display: block;
-            float: left;
             box-sizing: border-box;
         }
         .img-1{
-         
+            border: 1px solid;
             max-height: fit-content;
             max-width: fit-content;
             display: block;
-            float: left;
+            position: relative;
             box-sizing: border-box;
+            left: 20em;
         }
         a{
             text-decoration: none;
@@ -108,7 +131,7 @@
         .container-1{
             background-color: #1A5FB4;
             max-width: 560px;
-            margin: auto ;
+            margin: 100px auto ;
             top: 50%;
             border: 1px solid;
             padding: 20px;
@@ -119,11 +142,13 @@
         }
         .container-2{
             background-color: #1A5FB4;
-            max-width: 560px;
-        
+            max-width: 720px;
+            max-height: 460px;
 
             
-            margin: auto;
+            position: relative;
+            left: 20em;
+            top: 2em;
             border: 1px solid;
             padding: 20px;
             
@@ -132,7 +157,8 @@
             
         }
         .container_full{
-            margin-top:0px ;
+         
+           
          
         }
         select{cursor: pointer;}
@@ -141,6 +167,9 @@
     </style>
 </head>
 <body>
+    <div class="img-1">
+        <img class="img-div"src="/Image_Folder/IMG-01.png" alt="Imagem" height="100px" width="760px">
+    </div>
     <ul class="navbar_up">
         <li><a href="#">Home</a> </li>
         <li><a href="#">Info</a> </li>
@@ -149,9 +178,7 @@
     </ul>
     <div class="container_full">
         
-        <div class="img-1">
-            <img class="img-div"src="/Image_Folder/Cópia de Arte.jpg" alt="Imagem" height="390px" width="390px">
-        </div>
+ 
         
         <div class="container-2">
             <form>
@@ -174,13 +201,20 @@
             </div>
 <br>
 <div class="btn">
- <input type="submit"  value="cadastrar">
+<input type="submit"  value="cadastrar">
 
 </div>
 <a class="btn" href="/MainPage.html">voltar para a tela de login</a>
         </div>
     </div>
 </div>
+<br><br><br>
+<ul class="navbar_down">
+    <li><a href="#">Contact</a> </li>
+    <li><a href="#">More Sites</a> </li>
+    <li><a href="#">Customer Area</a> </li>
+  
+</ul>
 </form>
 </body>
 </html>
