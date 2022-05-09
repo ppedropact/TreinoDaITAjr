@@ -195,8 +195,93 @@ function contarPalavras(StringEntrada) {
     return console.log(counter)
 }
 contarPalavras("Sou uma frase")
-contarPalavras("Me divirto aprendendo a programar") 
+contarPalavras("Me divirto aprendendo a programar")
 
 console.log('ex21')
+function contarCaractere(Letra, StringEntrada) {
+    let counter = 0
+    for (let i = 0; i < StringEntrada.length; i++) {
+        if (StringEntrada[i] == Letra) { counter++ }
+    }
+    return console.log(counter)
+}
+contarCaractere("r", "A sorte favorece os audazes")
+contarCaractere("c", "Conhece-te a ti mesmo")
+
+console.log('ex22')
+function buscarPalavrasSemelhantes(Palavra, ArrayEntrada) {
+    let ArraySaida = []
+    let counter = 0
+    let counter2 = 0
+    for (let i = 0; i < ArrayEntrada.length; i++) {
+        counter = 0
+        for (let j = 0; j < ArrayEntrada[i].length; j++) {
+            counter = 0
+            for (let k = 0; k < Palavra.length; k++) {
+                if (Palavra[k] == ArrayEntrada[i][j + k]) { counter++ }
+                else { counter = 0 }
+                if (counter == Palavra.length) {
+                    ArraySaida[counter2] = ArrayEntrada[i]
+                    counter2++
+                    break
+                }
+            }
+        }
+    }
+    return console.log(ArraySaida)
+}
+buscarPalavrasSemelhantes("pro", ["programação", "mobile", "profissional"]) // retornará ["programação", "profissional"]
+buscarPalavrasSemelhantes("python", ["javascript", "java", "c++"]) // retornará []
+console.log('ex23')
+//duvida
+function removerVogais(StringEntrada) {
+    let StringSaida = StringEntrada
+    let counter = 0
+    for (let i = 0; i < StringEntrada.length; i++) {
+        if (!['a', 'e', 'i', 'o', 'u'].includes(StringEntrada[i])) {
+            StringSaida[counter] = StringEntrada[i]
+            counter++
+        }
+    }
+    return console.log(StringSaida)
+}
+removerVogais("Cod3r")
+removerVogais("Fundamentos")
+
+console.log('ex24')
+function inverter(ObjetoEntrada) {
+
+}
+inverter({ a: 1, b: 2, c: 3 })
+
+console.log('ex25')
+function filtrarPorQuantidadeDeDigitos() { }
+filtrarPorQuantidadeDeDigitos([38, 2, 365, 10, 125, 11], 2) // retornará [38, 10, 11]
+filtrarPorQuantidadeDeDigitos([5, 9, 1, 125, 11], 1) // retornará [5, 9, 1]
+
+console.log('ex26')
+function segundoMaior() { }
+segundoMaior([12, 16, 1, 5]) // retornará 12
+segundoMaior([8, 4, 5, 6]) // retornará 6
+
+console.log('ex27')
+function recerberMelhorEstudante(ObjetoEntrada) {
+    let mediaaluno = ['']
+    for (let i = 0; i < ObjetoEntrada.length; i++) { mediaaluno[i] = calcularMedia(ObjetoEntrada[i]) }
+    let maior = mediaaluno[0]
+    Maiornew = 0
+    for (let j = 0; j < ObjetoEntrada.length; j++) {
+        if (mediaaluno[j] > maior) {
+            maior = mediaaluno[j]
+            Maiornew = j
+        }
+    }
+    return console.log(ObjetoEntrada[Maiornew])
+}
+recerberMelhorEstudante({
+    Joao: [8, 7.6, 8.9, 6], // média 7.625
+    Mariana: [9, 6.6, 7.9, 8], // média 7.875
+    Carla: [7, 7, 8, 9] // média 7.75
+}) // retornará { nome: "Mariana", media: 7.875 }
 
 
