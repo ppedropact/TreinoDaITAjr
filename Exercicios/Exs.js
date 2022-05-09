@@ -247,7 +247,7 @@ function removerVogais(StringEntrada) {
 }
 removerVogais("Cod3r")
 removerVogais("Fundamentos")
-
+//duvida
 console.log('ex24')
 function inverter(ObjetoEntrada) {
 
@@ -258,12 +258,31 @@ console.log('ex25')
 function filtrarPorQuantidadeDeDigitos() { }
 filtrarPorQuantidadeDeDigitos([38, 2, 365, 10, 125, 11], 2) // retornará [38, 10, 11]
 filtrarPorQuantidadeDeDigitos([5, 9, 1, 125, 11], 1) // retornará [5, 9, 1]
-
+//duvida
 console.log('ex26')
-function segundoMaior() { }
+function segundoMaior(ArrayEntrada) {
+    let maior = ArrayEntrada[0]
+    let maior2 = ArrayEntrada[0] 
+    let location = 0
+    for (let i = 0; i < ArrayEntrada.length; i++) {
+        if (maior < ArrayEntrada[i]) {
+            maior = ArrayEntrada[i]
+            location = i
+        }
+        if ((ArrayEntrada[i] < maior) && (ArrayEntrada > maior2)){ maior2 = ArrayEntrada[i] }
+    }
+    if (location === 0) {
+        maior2=ArrayEntrada[1]
+        for (let i = 0; i < ArrayEntrada.length; i++) {
+            if ((ArrayEntrada[i] < maior) && (ArrayEntrada > maior2)){ maior2 = ArrayEntrada[i] }
+        }
+    }
+    return console.log(maior2,location)
+}
 segundoMaior([12, 16, 1, 5]) // retornará 12
 segundoMaior([8, 4, 5, 6]) // retornará 6
-
+segundoMaior([1,2,3,4,5,6])
+//duvida
 console.log('ex27')
 function recerberMelhorEstudante(ObjetoEntrada) {
     let mediaaluno = ['']
